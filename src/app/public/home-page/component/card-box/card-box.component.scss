@@ -1,0 +1,84 @@
+.section-box{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-height:1000px) {
+      margin-bottom: 100px;
+    }
+  }
+  .cards-box{
+    width: 100%;
+    margin-left: 100px;
+    height: 100%;
+  }
+  .title{
+    color: #EFEFEF;
+    font-family: san-francisco;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    font-size: 26px;
+  }
+  .card{
+    width: 850px;
+    height: 300px;
+    padding: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #102F43;
+    //background-color: rgba(33, 37, 41, 0);
+    border-width: 0;
+    color: #EFEFEF;
+    a{
+      text-decoration: none;
+      color: #EFEFEF;
+    }
+  }
+  .text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    overflow: hidden;
+    height: 100%;
+    width: 540px;
+    h5{
+      margin-right: 20px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+    p{
+      font-size: 16px;
+      margin-right: 20px;
+    }
+    .mas {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 16px;
+    }
+  }
+  img{
+    height: 250px;
+    width: 350px;
+  }
+  .separator{
+    height: 0.5px;
+    background-color: white;
+    width: 1000px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .mas-antiguos-box{
+    width: 1000px;
+  }
+  .mas-antiguos{
+    float: right;
+    margin-top: 75px;
+    font-family: san-francisco;
+    letter-spacing: 1px;
+    background-color: #F66B0E;
+    width: 150px;
+    color: #EFEFEF;
+  }
+  

@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: san-francisco-light;
+    src: url(assets/fonts/SF-Pro-Display-Light.otf);
+}
+@font-face {
+    font-family: san-francisco-medium;
+    src: url(assets/fonts/SF-Pro-Display-Medium.otf);
+}
+body{
+    background-color: #112B3C;
+}

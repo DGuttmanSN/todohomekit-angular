@@ -1,0 +1,18 @@
+<div class="section-box">
+    <div class="cards-box">
+      <h5 class="title">Últimos artículos</h5>
+      <div *ngFor="let card of listedCards">
+        <div class="card">
+          <div class="text-box">
+            <a class="card-title"><h5>{{ card.title }}</h5></a>
+            <p>{{ card.description }}</p>
+            <p>{{ card.createDate }}</p>
+          </div>
+          <a ><img src="{{ card.imagePath }}" alt="Error al cargar la imagen"></a>
+        </div>
+      </div>
+      <div class="mas-antiguos-box" *ngIf="lastCard < cardsLength">
+        <button class="mas-antiguos btn" (click)="nextpage()">Más antiguos -></button>
+      </div>
+    </div>
+  </div>

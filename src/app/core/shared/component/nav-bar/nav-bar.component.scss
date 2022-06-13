@@ -1,0 +1,43 @@
+nav {
+    height: 75px;
+    letter-spacing: 1.5px;
+}
+.cont{
+    width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    a{
+        color: #EFEFEF;
+        text-decoration: none;
+        font-family: san-francisco-medium;
+    }
+}
+.right-box{
+    .link{
+        font-size: 16px;
+        margin-right: 20px;
+        font-family: san-francisco-light;
+    }
+    a{
+        margin-left: 15px;
+    }
+}
+.logo{
+    font-size: 24px;
+}
+.account{
+    margin-left: 50px;
+}
+.btn{
+    font-size: 18px;
+    border-width: 2px;
+}
+.btn-login{
+    color: #EFEFEF;
+    width: 90px;
+}
+.btn-register{
+    background-color: #F66B0E;
+    width: 150px;
+    color: #EFEFEF;
+}
