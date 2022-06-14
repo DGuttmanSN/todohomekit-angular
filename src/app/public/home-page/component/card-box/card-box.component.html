@@ -1,18 +1,28 @@
-<div class="section-box">
-    <div class="cards-box">
-      <h5 class="title">Últimos artículos</h5>
+<section>
+  <div class="cards-box">
+    <h5 class="section-title">Últimos artículos</h5>
+    <div class="iteration-box">
       <div *ngFor="let card of listedCards">
-        <div class="card">
-          <div class="text-box">
-            <a class="card-title"><h5>{{ card.title }}</h5></a>
-            <p>{{ card.description }}</p>
-            <p>{{ card.createDate }}</p>
-          </div>
-          <a ><img src="{{ card.imagePath }}" alt="Error al cargar la imagen"></a>
-        </div>
-      </div>
-      <div class="mas-antiguos-box" *ngIf="lastCard < cardsLength">
-        <button class="mas-antiguos btn" (click)="nextpage()">Más antiguos -></button>
+          <div class="card-box">
+            <a class="news-body">
+              <div class="centrado">
+                <div>
+                  <p class="news-title" [routerLink]="['../article', card.id]">{{card.title}}</p>
+                  <p class="news-description">{{card.description}}</p>
+                </div>
+                <div class="info">
+                  <p class="fecha">Publicación: {{card.createDate}}</p>
+                  <a class="leer-mas" [routerLink]="['../article', card.id]">Seguir leyendo <span class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+              </div>
+            </a>
+          <img src="{{card.imagePath}}" class="news-img">
       </div>
     </div>
+    </div>
+    <div class="mas-antiguos-box" *ngIf="lastCard < cardsLength">
+      <button class="mas-antiguos btn" (click)="nextpage()">Más antiguos -></button>
+    </div>
   </div>
+  
+</section>

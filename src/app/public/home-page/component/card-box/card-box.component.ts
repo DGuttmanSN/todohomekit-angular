@@ -1,6 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { ArticlesService } from 'src/app/core/service/articles.service';
 import { Card } from '../../../../core/model/Card';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-card-box',
@@ -13,9 +15,9 @@ export class CardBoxComponent implements OnInit, OnDestroy {
   cardsLength:number;
   listedCards = <Card[]>[];
   firstCard:number = 0;
-  lastCard:number = 4;
+  lastCard:number = 6;
 
-  constructor(private articlesService:ArticlesService) { }
+  constructor(private articlesService:ArticlesService, private router:RouterModule) { }
 
   ngOnInit(): void {
     this.articlesService.cardRequest().subscribe(
@@ -40,13 +42,13 @@ export class CardBoxComponent implements OnInit, OnDestroy {
     this.cardList = [];
     this.listedCards = [];
     this.firstCard = 0;
-    this.lastCard = 4;
+    this.lastCard = 6;
   }
 
   nextpage(){
     this.listedCards = [];
-    this.firstCard = this.firstCard + 5;
-    this.lastCard = this.lastCard + 5;
+    this.firstCard = this.firstCard + 6;
+    this.lastCard = this.lastCard + 6;
     for(let i = this.firstCard; i < this.lastCard; i++){
       if(i < this.cardsLength){
         this.listedCards.push(this.cardList[i]);
@@ -54,6 +56,7 @@ export class CardBoxComponent implements OnInit, OnDestroy {
         break;
       }
     }
+    console.dir(this.listedCards)
   }
   
 }

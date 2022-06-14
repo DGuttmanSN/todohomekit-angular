@@ -1,0 +1,15 @@
+<div class="box">
+    <div class="login-card">
+        <h3 class="login-title">Accede</h3>
+        <form (ngSubmit)="login()" class="form">
+            <p>Usuario</p>
+            <input type="text" name="user" [(ngModel)]="user">
+            <p>Contraseña</p>
+            <input type="password" name="password" [(ngModel)]="password">
+            <div class="buttons-box">
+                <input type="submit" value="Acceder" class="btn acceder-btn" [routerLink]="['../home']">
+                <a class="">Ir a nicio</a>
+            </div>
+        </form>
+    </div>
+</div>

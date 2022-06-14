@@ -1,12 +1,24 @@
-<nav class="container-fluid d-flex justify-content-center">
-    <div class="cont d-flex align-items-center justify-content-between">
-        <a href="" class="logo">PFC</a>
-        <div class="right-box d-flex align-items-center">
-            <a href="" class="link">Link 1</a>
-            <a href="" class="link">Link 2</a>
+<nav id="navegador" class="hidden-nav">
+    <div class="cont">
+        <div class="menu-icon">
+            <span (click)="mostrarOcultar()" class="material-symbols-outlined">menu</span>
+            <span class="material-symbols-outlined home">home </span>
+        </div>
+        <a href="" class="logo">Todo-HomeKit</a>
+        <div class="right-box">
+            <div class="links-box">
+                <a href="" class="link">Página de inicio</a>
+                <a href="" class="link">Categorias</a>
+                <a href="" class="link">Contacta con nosotros</a>
+            </div>
             <div class="account">
-                <a href="" class="btn btn-login">Login</a>
-                <a href="" class="btn btn-register">Resgístrate</a>
+                <a href="" class="btn btn-login" [routerLink]="['../login']" *ngIf="!loged">Login</a>
+                <a href="" class="btn btn-login" [routerLink]="['../home']" *ngIf="loged" (click) = "logout()">Log out</a>
+                <a href="" class="btn btn-register"  *ngIf="!loged">Resgístrate</a>
+                <div>
+                    <p class="copyright">Copyright©</p>
+                    <p class="autor">Daniel Guttman</p>
+                </div>
             </div>
         </div>
     </div>

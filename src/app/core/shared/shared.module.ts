@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router'
-import {HttpClientModule} from "@angular/common/http";
+import { Routes, RouterModule } from '@angular/router'
+import { HttpClientModule } from "@angular/common/http";
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { ArticlesService } from '../service/articles.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UserService } from '../service/user.service';
 
 @NgModule({
   declarations: [
@@ -12,13 +14,15 @@ import { ArticlesService } from '../service/articles.service';
   imports: [
     CommonModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports: [
     NavBarComponent
   ],
   providers: [
-    ArticlesService
+    ArticlesService,
+    UserService
   ]
 })
 export class SharedModule {
