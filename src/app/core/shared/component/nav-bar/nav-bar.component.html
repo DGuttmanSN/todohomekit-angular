@@ -1,25 +1,14 @@
-<nav id="navegador" class="hidden-nav">
+<nav id="navegador" class="nav">
     <div class="cont">
-        <div class="menu-icon">
-            <span (click)="mostrarOcultar()" class="material-symbols-outlined">menu</span>
-            <span class="material-symbols-outlined home">home </span>
+        <div class="links-box">
+            <a href="" class="link" [routerLink]="['../categorias']">Categorías</a>
+            <a href="" class="link">Contacta con nosotros</a>
         </div>
-        <a href="" class="logo">Todo-HomeKit</a>
-        <div class="right-box">
-            <div class="links-box">
-                <a href="" class="link">Página de inicio</a>
-                <a href="" class="link">Categorias</a>
-                <a href="" class="link">Contacta con nosotros</a>
-            </div>
-            <div class="account">
-                <a href="" class="btn btn-login" [routerLink]="['../login']" *ngIf="!loged">Login</a>
-                <a href="" class="btn btn-login" [routerLink]="['../home']" *ngIf="loged" (click) = "logout()">Log out</a>
-                <a href="" class="btn btn-register"  *ngIf="!loged">Resgístrate</a>
-                <div>
-                    <p class="copyright">Copyright©</p>
-                    <p class="autor">Daniel Guttman</p>
-                </div>
-            </div>
+        <a href="" class="logo">Todo HomeKit</a>
+        <div class="account">
+            <a href="" class="btn btn-login" [routerLink]="['../login']" *ngIf="!loged">Login</a>
+            <a href="" class="btn btn-login" [routerLink]="['../home']" *ngIf="loged" (click) = "logout()">Log out</a>
+            <a href="" class="btn btn-register" [routerLink]="['../register']"  *ngIf="!loged">Resgístrate</a>
         </div>
     </div>
 </nav>

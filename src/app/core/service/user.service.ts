@@ -17,4 +17,15 @@ export class UserService {
     return this.http.post<Auth>("http://localhost:8080/login", body);
   }
 
+  register(firstName:string, lastName:string, user:string, password:string, email:string){
+    let body = {
+      "firstName": firstName,
+      "lastName": lastName,
+      "user": user,
+      "password": password,
+      "email": email
+    }
+    return this.http.post<Auth>("http://localhost:8080/register", body);
+  }
+
 }

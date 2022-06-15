@@ -20,6 +20,9 @@
 .login-title{
     margin-bottom: 50px;
 }
+input {
+    width: 300px;
+}
 .form{
     display: flex;
     flex-direction: column;
@@ -34,4 +37,8 @@
     width: 100px;
     background-color: #F66B0E;
     color: white;
+}
+.inicio{
+    text-decoration: none;
+    color:black;
 }

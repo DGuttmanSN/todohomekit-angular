@@ -1,0 +1,41 @@
+.contenido{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 200px;
+}
+H1{
+    width: 75%;
+}
+.container-padre {
+    position: relative;
+    top: 50px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contenedor-categorias{
+    width: 100%;
+    height: 100%;
+}
+.categoria-box{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 25px 0;
+}
+.categoria-card{
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1F1F1;
+    border-radius: 35px;
+    box-shadow: 0 10px 20px -10px gray;
+    h4{
+        margin: 0;
+    }
+}

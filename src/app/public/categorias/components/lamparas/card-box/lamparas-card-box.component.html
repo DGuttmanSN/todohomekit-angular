@@ -1,0 +1,27 @@
+<section>
+  <div class="cards-box">
+    <h5 class="section-title">Lámparas</h5>
+    <div class="iteration-box">
+      <div *ngFor="let card of listedCards">
+          <div class="card-box">
+            <a class="news-body">
+              <div class="centrado">
+                <div>
+                  <p class="news-title" [routerLink]="['../../article', card.id]">{{card.title}}</p>
+                  <p class="news-description">{{card.description}}</p>
+                </div>
+                <div class="info">
+                  <a class="leer-mas" [routerLink]="['../article', card.id]">Seguir leyendo <span class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+              </div>
+            </a>
+          <img src="{{card.imagePath}}" class="news-img">
+      </div>
+    </div>
+    </div>
+    <div class="mas-antiguos-box" *ngIf="lastCard < cardsLength">
+      <button class="mas-antiguos btn" (click)="nextpage()">Más antiguos -></button>
+    </div>
+  </div>
+  
+</section>

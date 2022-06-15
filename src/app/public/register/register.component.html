@@ -1,1 +1,21 @@
-<p>register works!</p>
+<div class="box">
+    <div class="login-card">
+        <h3 class="login-title">Regístrate</h3>
+        <form (ngSubmit)="register()" class="form">
+            <p>Nombre</p>
+            <input type="text" name="firstName" [(ngModel)]="firstName" class="form-control">
+            <p>Apellidos</p>
+            <input type="text" name="lastName" [(ngModel)]="lastName" class="form-control">
+            <p>Usuario</p>
+            <input type="text" name="user" [(ngModel)]="user" class="form-control">
+            <p>Contraseña</p>
+            <input type="password" name="email" [(ngModel)]="email" class="form-control">
+            <p>Correo electónico</p>
+            <input type="email" name="password" [(ngModel)]="password" class="form-control">
+            <div class="buttons-box">
+                <input type="submit" value="Acceder" class="btn acceder-btn">
+                <a class="inicio" [routerLink]="['../home']">Ir a inicio</a>
+            </div>
+        </form>
+    </div>
+</div>

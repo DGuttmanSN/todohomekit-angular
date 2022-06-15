@@ -1,16 +1,44 @@
+.centrado{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 article{
     position: relative;
-    left: 300px;
-    top: 100px;
-    width: 100vh;
+    top: 200px;
+    width: 125vh;
     padding-bottom: 100px;
+    
 }
 .article-title{
     margin-bottom: 50px;
 }
 p{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+h3{
+    margin-top: 50px;
+    margin-bottom: 35px;
 }
 .encabezado-container{
     margin-top: 100px;
+}
+.contenedor-comentarios{
+    margin-top: 100px;
+}
+.comentario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
+    padding: 50px;
+    background-color: #F1F1F1;
+    border-radius: 20px;
+    h5{
+        margin-bottom: 20px;
+    }
+    p{
+        margin: 0;
+    }
 }

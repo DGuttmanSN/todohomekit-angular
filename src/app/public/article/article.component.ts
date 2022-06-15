@@ -21,6 +21,11 @@ export class ArticleComponent implements OnInit {
         this.article = article;
       })
     });
+    this.activatedRoute.params.subscribe((id) => {
+      this.articleService.articleRequest(id['id']).subscribe( (article)=> {
+        this.article = article;
+      })
+    });
   }
 
 }
