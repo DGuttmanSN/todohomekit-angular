@@ -6,10 +6,18 @@
     </article>
     <div class="contenedor-comentarios">
         <h3>Comentarios</h3>
-        <div>
+        <div *ngIf="logueado">
+            <h5>Añadir comentario</h5>
+            <form (ngSubmit)="comentar()" class="form">
+                <input type="text" class="usuario-comentario" name="usuario" [(ngModel)]="usuario" placeholder="Usuario">
+                <textarea type="text" class="comentario-text" name="comentario" [(ngModel)]="comentario" placeholder="Comentario, máximo 255 caractéres"></textarea>
+                <input type="submit" value="Comentar" class="btn btn-comentario">
+            </form>
+        </div>
+        <div  *ngFor="let comment of commentsList">
             <div class="comentario">
-                <h5>Nombre: </h5>
-                <p>Contenido del comentario</p>
+                <h5>{{comment.usuario}}</h5>
+                <p>{{comment.comentario}}</p>
             </div>
         </div>
     </div>
