@@ -8,12 +8,12 @@
             <input type="text" name="lastName" [(ngModel)]="lastName" class="form-control">
             <p>Usuario</p>
             <input type="text" name="user" [(ngModel)]="user" class="form-control">
-            <p>Contraseña</p>
-            <input type="password" name="email" [(ngModel)]="email" class="form-control">
             <p>Correo electónico</p>
-            <input type="email" name="password" [(ngModel)]="password" class="form-control">
+            <input type="email" name="email" [(ngModel)]="email" class="form-control">
+            <p>Contraseña</p>
+            <input type="password" name="password" [(ngModel)]="password" class="form-control">
             <div class="buttons-box">
-                <input type="submit" value="Acceder" class="btn acceder-btn">
+                <input type="submit" value="Registrar" class="btn acceder-btn" [routerLink]="['../home']">
                 <a class="inicio" [routerLink]="['../home']">Ir a inicio</a>
             </div>
         </form>
