@@ -1,0 +1,16 @@
+<app-nav-bar></app-nav-bar>
+<div class="mail-box">
+    <div class="centrado">
+        <div class="formulario-box">
+            <h2 class="mb-5">Formulario</h2>
+            <form (ngSubmit)="enviar()" class="form">
+                <input type="text" name="nombre" [(ngModel)]="nombre" placeholder="Nombre">
+                <input type="text" name="apellidos" [(ngModel)]="apellidos" placeholder="Apellidos">
+                <input type="text" name="email" [(ngModel)]="email" placeholder="Email">
+                <input type="text" name="asunto" [(ngModel)]="asunto" placeholder="Asunto">
+                <textarea type="text" name="mensaje" rows="10" [(ngModel)]="mensaje" placeholder="Mensaje"></textarea>
+                <input type="submit" value="Acceder" class="btn btn-correo">
+            </form>
+        </div>
+    </div>
+</div>
