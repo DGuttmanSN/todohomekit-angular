@@ -33,6 +33,7 @@ export class NavBarComponent implements OnInit {
   logout(){
     localStorage.removeItem("auth");
     this.loged = false;
+    location.reload();
   }
 
 }

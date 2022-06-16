@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Article } from '../model/Article';
 import { Card } from '../model/Card';
 import { Comentario } from '../model/Comentario';
+import { PostComentario } from '../model/PostComentario';
 import { Tags } from '../model/Tags';
 
 @Injectable({
@@ -27,7 +28,16 @@ export class ArticlesService {
   }
 
   articleComents(id:number){
-    return this.http.get<Comentario[]>("http://localhost:8080/article/comentarios"+id);
+    return this.http.get<Comentario[]>("http://localhost:8080/get/comments/"+id);
+  }
+
+  comentar(comentario:string, usuario:string, idArticulo:number){
+    let body = {
+      "comentario":comentario,
+      "usuario":usuario,
+      "idArticulo":idArticulo
+    }
+    return this.http.post<String>("http://localhost:8080/post/comment", body);
   }
 
 }
